@@ -495,7 +495,8 @@
       blockEdit (block) {
         this.$emit('blockEdit', block)
       },
-      blockDelete (block) {
+
+      removeBlock (block) {
         if (block.selected) {
           this.blockDeselect(block)
         }
@@ -508,6 +509,10 @@
           return b.id !== block.id
         })
         this.updateScene()
+      },
+
+      blockDelete (block) {
+        this.$emit('blockDelete', block)
       },
       //
       prepareBlocks (blocks) {

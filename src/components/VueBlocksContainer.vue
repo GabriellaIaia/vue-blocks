@@ -495,6 +495,7 @@
       blockEdit (block) {
         this.$emit('blockEdit', block)
       },
+
       removeBlock (block) {
         if (block.selected) {
           this.blockDeselect(block)
